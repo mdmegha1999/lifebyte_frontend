@@ -83,7 +83,7 @@ function App() {
 
   async function fetchStudents() {
     try {
-      const res = await axios.get("http://localhost:5000/api/data");
+      const res = await axios.get("https://lifebyte-backend.onrender.com/api/data");
       setData(res.data.data);
     } catch (error) {
       console.log(error);
@@ -92,7 +92,7 @@ function App() {
 
   async function postNewStudent() {
     try {
-      await axios.post("http://localhost:5000/api/create", formData);
+      await axios.post("https://lifebyte-backend.onrender.com/api/create", formData);
       setApiRes({
         message: "Submitted Successfully!",
         status: "success"
